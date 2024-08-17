@@ -14,7 +14,7 @@ public class key {
     }
     public String userkey()
     {
-        System.out.println("Enter the User Key for Password(A Single Word)");
+        System.out.println("Enter the User Passphrase(A line)");
         String stkey = sc.nextLine();
         return stkey;
     }
