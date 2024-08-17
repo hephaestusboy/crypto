@@ -5,20 +5,16 @@ public class keyconvertion {
     {
         char ch;
         key rin = new key();
-        long stkeyconverted=0;
-        int randomkey = rin.randomkey();
+        StringBuilder stkeyconverted = new StringBuilder();
+        String randomkey = rin.randomkey();
         String stkey = rin.userkey();
         for(int i=0;i<stkey.length();i++)
         {
             ch = stkey.charAt(i);
-            stkeyconverted += (ch%100);
-            if((i+1)!=stkey.length())
-            {
-                stkeyconverted *= 100;
-            }
+            stkeyconverted.append((int)(ch%100));
         }
-        String keyString1 = Long.toString(stkeyconverted);
-        String keyString2 = Integer.toString(randomkey);
+        String keyString1 = stkeyconverted.toString();
+        String keyString2 = randomkey;
         StringBuilder keyString = new StringBuilder();
         int j=0,k=0;
         for (int i = 0; i < (keyString1.length() + keyString2.length()); i++) 
