@@ -1,17 +1,19 @@
 package javacode;
 
 public class keyconvertion {
+    String randomkey;
+    String key;
     public void keyconvert()
     {
         char ch;
         key rin = new key();
         StringBuilder stkeyconverted = new StringBuilder();
-        String randomkey = rin.randomkey();
+        randomkey = rin.randomkey();
         String stkey = rin.userkey();
         for(int i=0;i<stkey.length();i++)
         {
             ch = stkey.charAt(i);
-            stkeyconverted.append((int)(ch%100));
+            stkeyconverted.append((ch%100));
         }
         String keyString1 = stkeyconverted.toString();
         String keyString2 = randomkey;
@@ -31,9 +33,7 @@ public class keyconvertion {
             }
          
         }
-
-        String key = keyString.toString();
+        key = keyString.toString();
         System.out.println("Converted key is "+stkeyconverted+"\n KeyString1 is "+keyString1+"\n Keystring2 is "+keyString2+"\n Key is "+key);
-        // return new Pair<long,Integer>(stkeyconverted,keybackup);
     }
 }

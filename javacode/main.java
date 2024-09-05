@@ -4,5 +4,7 @@ class program {
     {
         algorithm run = new algorithm();
         run.algo();
+        sendkey terminal = new sendkey();
+        terminal.integerkey();
     }
 }
