@@ -3,7 +3,7 @@ package javacode;
 public class keyconvertion {
     String randomkey;
     String key;
-    public void keyconvert()
+    public String keyconvert()
     {
         char ch;
         key rin = new key();
@@ -34,6 +34,7 @@ public class keyconvertion {
          
         }
         key = keyString.toString();
-        System.out.println("Converted key is "+stkeyconverted+"\n KeyString1 is "+keyString1+"\n Keystring2 is "+keyString2+"\n Key is "+key);
+//        System.out.println("Converted key is "+stkeyconverted+"\n KeyString1 is "+keyString1+"\n Keystring2 is "+keyString2+"\n Key is "+key);
+        return randomkey;
     }
 }

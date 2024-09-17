@@ -16,6 +16,7 @@ public class key {
     {
         System.out.println("Enter the User Passphrase(A line)");
         String stkey = sc.nextLine();
+        //String stkey = "hello there how are you";
         return stkey;
     }
 }

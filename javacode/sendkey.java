@@ -1,7 +1,9 @@
 package javacode;
 public class sendkey {
+    String randkey;
+    public void integerkey(algorithm run){
     StringBuilder sendkey = new StringBuilder();
-    keyconvertion skey = new keyconvertion();
-    String randkey = skey.randomkey;
+    randkey = run.randomkeygenerated;
     System.out.println(randkey);
+    }
 }
