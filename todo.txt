@@ -1,3 +1,0 @@
-Operations To be done. Mark as complete once done.
-
-1. Create a backend for websites.
