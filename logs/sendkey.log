@@ -1,0 +1,12 @@
+Sep 18, 2024 1:19:18 AM javacode.key randomkey
+INFO: Generated random key: 144435628273768266442957645412571761178854914892887994
+Sep 18, 2024 1:19:18 AM javacode.key userkey
+INFO: Enter the User Passphrase (A line):
+Sep 18, 2024 1:19:22 AM javacode.key userkey
+INFO: User entered passphrase: helloo
+Sep 18, 2024 1:19:57 AM javacode.key randomkey
+INFO: Generated random key: 878361709812448263157176591995714368267280676425548547
+Sep 18, 2024 1:19:57 AM javacode.key userkey
+INFO: Enter the User Passphrase (A line):
+Sep 18, 2024 1:20:01 AM javacode.key userkey
+INFO: User entered passphrase: hello
