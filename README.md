@@ -9,27 +9,26 @@ Any suggestions regarding the code is appreciated.
 .
 ├── LICENSE
 ├── README.md
-├── class
-│   └── javacode
-│       ├── algorithm.class
-│       ├── key.class
-│       ├── keyconvertion.class
-│       ├── main.class
-│       └── sendkey.class
 ├── javacode
-│   ├── algorithm.java
-│   ├── key.java
-│   ├── keyconvertion.java
-│   ├── main.java
-│   └── sendkey.java
+│   ├── Algorithm.java
+│   ├── Key.java
+│   ├── KeyConversion.java
+│   ├── Program.java
+│   └── SendKey.java
 ├── javascript
 │   ├── client.js
 │   └── server.js
+├── logs
+│   ├── sendkey.log
+│   └── sendkey.log.1
 ├── requirements.txt
 ├── site
-│   ├── index.html
-│   └── style.css
+│   ├── signin.html
+│   ├── signup.html
+│   ├── signupstyle.css
+│   ├── style.css
+│   └── testsite.html
 └── todo.txt
 
-6 directories, 18 files
+5 directories, 18 files
 ```
