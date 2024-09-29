@@ -19,16 +19,13 @@ Any suggestions regarding the code is appreciated.
 │   ├── client.js
 │   └── server.js
 ├── logs
-│   ├── sendkey.log
-│   └── sendkey.log.1
 ├── requirements.txt
-├── site
-│   ├── signin.html
-│   ├── signup.html
-│   ├── signupstyle.css
-│   ├── style.css
-│   └── testsite.html
-└── todo.txt
+└── site
+    ├── signin.html
+    ├── signup.html
+    ├── signupstyle.css
+    ├── style.css
+    └── testsite.html
 
-5 directories, 18 files
+5 directories, 15 files
 ```
