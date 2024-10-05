@@ -1,3 +1,6 @@
 log/sendkey.log
 log/sendkehy.log.1
 sites/node_modules/
+sites/package-lock.json
+sites/package.json
+sites/users.json
