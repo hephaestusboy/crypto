@@ -20,12 +20,18 @@ Any suggestions regarding the code is appreciated.
 │   └── server.js
 ├── logs
 ├── requirements.txt
-└── site
-    ├── signin.html
-    ├── signup.html
-    ├── signupstyle.css
-    ├── style.css
-    └── testsite.html
+└── sites
+    ├── package-lock.json
+    ├── package.json
+    ├── server.js
+    ├── site
+    │   ├── script.js
+    │   ├── signin.html
+    │   ├── signup.html
+    │   ├── signupstyle.css
+    │   ├── style.css
+    │   └── testsite.html
+    └── users.json
 
-5 directories, 15 files
+6 directories, 20 files
 ```
