@@ -21,17 +21,15 @@ Any suggestions regarding the code is appreciated.
 ├── logs
 ├── requirements.txt
 └── sites
-    ├── package-lock.json
-    ├── package.json
     ├── server.js
     ├── site
-    │   ├── script.js
-    │   ├── signin.html
-    │   ├── signup.html
-    │   ├── signupstyle.css
-    │   ├── style.css
-    │   └── testsite.html
-    └── users.json
+    └─── script.js
+        ├── signin.html
+        ├── signup.html
+        ├── signupstyle.css
+        ├── style.css
+        └── testsite.html
+    
 
-6 directories, 20 files
+6 directories, 17 files
 ```
