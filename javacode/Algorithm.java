@@ -8,7 +8,7 @@ public class Algorithm {
         KeyConversion keyConversion = new KeyConversion();
         randomKeyGenerated = keyConversion.convertKey();
         // Optionally print the generated key if needed for debugging
-        // System.out.println("Randomly generated key = " + randomKeyGenerated);
+        System.out.println("Randomly generated key = " + randomKeyGenerated);
         return result;
     }
 

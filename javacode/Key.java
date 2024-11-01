@@ -2,6 +2,7 @@ package javacode;
 
 import java.io.IOException;
 import java.nio.file.*;
+import java.security.SecureRandom;
 import java.util.*;
 import java.util.logging.*;
 
@@ -39,9 +40,9 @@ public class Key {
     // Method to generate a random key
     public String generateRandomKey() {
         StringBuilder randomKey = new StringBuilder();
-        Random random = new Random();
+        SecureRandom random = new SecureRandom();
         for (int i = 0; i < 6; i++) {
-            randomKey.append(Integer.toString(random.nextInt(100000000, 999999999)));
+            randomKey.append(Long.toString(Math.abs(random.nextLong())));
         }
         logger.log(Level.INFO, "Generated random key: " + randomKey.toString());
         return randomKey.toString();
