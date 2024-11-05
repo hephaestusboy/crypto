@@ -27,7 +27,7 @@ public class decryptor {
             decompressed = decompressed.substring(0, decompressed.length() - 1);
         }
 
-        System.out.println("Decrypted string: " + decompressed);
+        //System.out.println("Decrypted string: " + decompressed);
         return decompressed;
     }
 

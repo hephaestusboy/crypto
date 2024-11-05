@@ -38,7 +38,7 @@ public class KeyConversion {
 
         // Assign the final interleaved key
         key = finalKey.toString();
-        System.out.println("Randomly Generated Final key = " + key);
+        //System.out.println("Randomly Generated Final key = " + key);
 
         // Optional: Uncomment the following line for debugging purposes
         // System.out.println("Converted key is: " + convertedKey + "\nKeyString1 is: " + keyString1 + "\nKeyString2 is: " + keyString2 + "\nFinal Key is: " + key);

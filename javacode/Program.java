@@ -21,7 +21,7 @@ public class Program {
         SendKey sendKey = new SendKey();
         sendKey.sendIntegerKey(algorithm);
         System.out.println("Final Encrypted Message is :" + encrypted);
-        System.out.println("Final Random Key Generated is:" + randomkey);
+        //System.out.println("Final Random Key Generated is:" + randomkey);
         System.out.println("Final decrypted Message is : " + decrypted);
     }
 }

@@ -32,7 +32,7 @@ public class encryptor {
 
         // Encrypt the compressed input
         encrypted = encryptAes(compressedInput, derivedKey);
-        System.out.println("Encrypted string (Hex): " + encrypted);
+        //System.out.println("Encrypted string (Hex): " + encrypted);
 
         return encrypted;
     }

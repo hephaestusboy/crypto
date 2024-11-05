@@ -8,7 +8,7 @@ public class Algorithmsofkey {
         randomKeyGenerated = keyConversion.convertKey();
         String finalkeyString = keyConversion.getKey();
         // Optionally print the generated key if needed for debugging
-        System.out.println("Randomly generated key = " + randomKeyGenerated);
+        //System.out.println("Randomly generated key = " + randomKeyGenerated);
         return finalkeyString;
     }
 
