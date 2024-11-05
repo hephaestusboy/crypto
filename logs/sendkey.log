@@ -100,3 +100,9 @@ Nov 05, 2024 11:03:45 PM javacode.Key getUserKey
 INFO: Enter the User Passphrase (A line):
 Nov 05, 2024 11:03:49 PM javacode.Key getUserKey
 INFO: User entered passphrase: hello world
+Nov 05, 2024 11:28:08 PM javacode.Key generateRandomKey
+INFO: Generated random key: 482027886700532864951995645445248632963323018239637076280665306686807054941379560229357399147008933406833531165621
+Nov 05, 2024 11:28:08 PM javacode.Key getUserKey
+INFO: Enter the User Passphrase (A line):
+Nov 05, 2024 11:28:12 PM javacode.Key getUserKey
+INFO: User entered passphrase: hello

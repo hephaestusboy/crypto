@@ -5,13 +5,19 @@ public class Program {
     static String finalkeyString;
     static String encrypted;
     static String decrypted;
+    static String inputString;
     public static void main(String[] args) throws Exception{
         Algorithmsofkey algorithm = new Algorithmsofkey();
         finalkeyString = algorithm.runAlgorithm();
         randomkey = algorithm.getRandomKeyGenerated();
-        encryption encrypt = new encryption();
-        decrypted = encrypt.encryptionfunction(finalkeyString);
-        encrypted = encrypt.getencrypted();
+        encryptor encrypt = new encryptor();
+        decryptor decrypt = new decryptor();
+        inputString = "Hello World";
+        encrypted = encrypt.encrypt(inputString, finalkeyString);
+        boolean isPadded = (inputString.length() % 2 != 0);
+        decrypted = decrypt.decrypt(encrypted, finalkeyString, isPadded);
+
+
         SendKey sendKey = new SendKey();
         sendKey.sendIntegerKey(algorithm);
         System.out.println("Final Encrypted Message is :" + encrypted);
