@@ -24,7 +24,6 @@ public class KeyConversion {
         String keyString1 = convertedKey.toString();
         String keyString2 = randomKey;
         StringBuilder finalKey = new StringBuilder();
-
         // Interleave the two key strings
         int j = 0, k = 0;
         for (int i = 0; i < (keyString1.length() + keyString2.length()); i++) {

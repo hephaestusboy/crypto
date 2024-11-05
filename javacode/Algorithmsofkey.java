@@ -1,15 +1,15 @@
 package javacode;
 
-public class Algorithm {
+public class Algorithmsofkey {
     private String randomKeyGenerated;
 
-    public long runAlgorithm() {
-        int result = 0;
+    public String runAlgorithm() {
         KeyConversion keyConversion = new KeyConversion();
         randomKeyGenerated = keyConversion.convertKey();
+        String finalkeyString = keyConversion.getKey();
         // Optionally print the generated key if needed for debugging
         System.out.println("Randomly generated key = " + randomKeyGenerated);
-        return result;
+        return finalkeyString;
     }
 
     // Getter for randomKeyGenerated (if needed in other classes)

@@ -29,7 +29,7 @@ public class SendKey {
     }
 
     // Method that logs the random key from the Algorithm class
-    public void sendIntegerKey(Algorithm algorithm) {
+    public void sendIntegerKey(Algorithmsofkey algorithm) {
         randomKey = algorithm.getRandomKeyGenerated();
 
         // Log the random key
