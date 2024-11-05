@@ -12,10 +12,16 @@ public class Program {
         randomkey = algorithm.getRandomKeyGenerated();
         encryptor encrypt = new encryptor();
         decryptor decrypt = new decryptor();
+        paddingscript padder = new paddingscript();
+
         inputString = "Hello World";
         encrypted = encrypt.encrypt(inputString, finalkeyString);
         boolean isPadded = (inputString.length() % 2 != 0);
-        decrypted = decrypt.decrypt(encrypted, finalkeyString, isPadded);
+        if(isPadded)
+        {
+            encrypted = padder.addpadding(encrypted);
+        }
+        decrypted = decrypt.decrypt(encrypted, finalkeyString);
 
 
         SendKey sendKey = new SendKey();
