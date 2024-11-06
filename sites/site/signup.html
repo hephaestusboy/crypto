@@ -13,37 +13,37 @@
         <div class="signin">
             <div class="content">
                 <h2>Sign Up</h2>
-                <form class="form"> <!-- Use <form> tag -->
-                    <div class="inputBox">
-                        <input type="text" required name="username"> <!-- Added name attribute -->
-                        <i>Username</i>
-                    </div>
-                    <div class="inputBox">
-                        <input type="email" required name="email"> <!-- Added name attribute -->
-                        <i>Email</i>
-                    </div>
-                    <div class="inputBox">
-                        <input type="password" required name="password"> <!-- Added name attribute -->
-                        <i>Password</i>
-                    </div>
-                    <div class="inputBox">
-                        <input type="password" required name="confirmPassword"> <!-- Added name attribute -->
-                        <i>Confirm Password</i>
-                    </div>
-                    <div class="links">
-                        <a href="signin.html">Already have an account? Login</a>
-                    </div>
-                    <div class="inputBox">
-                        <input type="submit" value="Sign Up">
-                    </div>
-                </form>
-                <div id="messageBox" class="messageBox" style="display: none;">
-                    <p id="messageText"></p>
+                <div class="form">
+                    <form id="signupForm">
+                        <div class="inputBox">
+                            <input type="text" name="username" required>
+                            <i>Username</i>
+                        </div>
+                        <div class="inputBox">
+                            <input type="email" name="email" required>
+                            <i>Email</i>
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" name="password" required>
+                            <i>Password</i>
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" name="confirm-password" required>
+                            <i>Confirm Password</i>
+                        </div>
+                        
+                        <div class="links">
+                            <a href="signin.html">Already have an account? Login</a>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" value="Sign Up">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
