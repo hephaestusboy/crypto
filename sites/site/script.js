@@ -1,91 +1,127 @@
-// Handle login form submission
-if (window.location.pathname.endsWith("signin.html")) {
-    document.querySelector('.form').addEventListener('submit', async (event) => {
-        event.preventDefault(); // Prevent the default form submission
-    
-        const formData = {
-            username: event.target.username.value,
-            password: event.target.password.value,
-        };
-    
-        try {
-            const response = await fetch('/signin', {
+// Function to handle form submissions
+function handleFormSubmission(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get the form that triggered the event
+    const form = event.target;
+
+    // Extract values from the form based on its ID
+    if (form.id === 'signinForm') {
+        const username = form.username.value;
+        const password = form.password.value;
+        console.log('Sign In Form Submitted');
+        console.log('Username:', username);
+        console.log('Password:', password);
+
+        // Retrieve user details from local storage
+        const storedUser = JSON.parse(localStorage.getItem('user'));
+
+        // Check if stored user details match input
+        if (storedUser && storedUser.username === username && storedUser.password === password) {
+            alert('Login successful!');
+            window.location.href = 'landing.html'; // Redirect to landing page
+        } else {
+            // If not found in local storage, try to validate against the server
+            fetch('http://localhost:3000/signin', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text(); // Or response.json() if your server returns JSON
+            })
+            .then(data => {
+                alert(data); // Show success message or server response
+                window.location.href = 'landing.html'; // Redirect to landing page
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to log in. Please check your credentials and try again.');
             });
-    
-            const result = await response.json();
-            
-            // Display the message in the message box
-            const messageBox = document.getElementById('messageBox');
-            const messageText = document.getElementById('messageText');
-            
-            messageBox.style.display = 'block'; // Show the message box
-            messageText.innerText = result.message; // Set the message text
-    
-            // Optionally, redirect to another page if sign-in is successful
-            if (result.success) {
-                // Redirect to a different page or perform other actions
-                window.location.href = '/dashboard'; // Example redirection
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            const messageBox = document.getElementById('messageBox');
-            const messageText = document.getElementById('messageText');
-            
-            messageBox.style.display = 'block'; // Show the message box
-            messageText.innerText = 'There was an error signing in. Please try again.'; // Set error message
         }
-    });
-    
-    
+
+    } else if (form.id === 'signupForm') {
+        const username = form.username.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const confirmPassword = form.querySelector('input[name="confirm-password"]').value; // Update this line
+        console.log('Sign Up Form Submitted');
+        console.log('Username:', username);
+        console.log('Email:', email);
+        console.log('Password:', password);
+        console.log('Confirm Password:', confirmPassword);
+
+        // Check if password and confirm password match
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+        // Store user details in local storage
+        const userDetails = {
+            username: username,
+            email: email,
+            password: password
+        };
+
+        // Optional: You can also send this data to the server
+        fetch('http://localhost:3000/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userDetails)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            alert(data); // Show success message
+            // Store in local storage
+            localStorage.setItem('user', JSON.stringify(userDetails)); // Store as a string
+            alert('Sign Up Successful! You can now sign in.');
+            window.location.href = 'signin.html'; // Redirect to sign-in page
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Failed to sign up. Please try again.');
+        });
+
+    } else if (form.id === 'passwordEntryForm') {
+        const title = form.title.value;
+        const username = form.username.value;
+        const password = form.password.value;
+        console.log('Add New Password Form Submitted');
+        console.log('Title:', title);
+        console.log('Username:', username);
+        console.log('Password:', password);
+        // Add password entry handling logic here (optional)
+    }
 }
 
-// Handle signup form submission
-if (window.location.pathname.endsWith("signup.html")) {
-    document.querySelector('.form').addEventListener('submit', async (event) => {
-        event.preventDefault(); // Prevent the default form submission
-    
-        const formData = {
-            username: event.target.username.value,
-            email: event.target.email.value,
-            password: event.target.password.value,
-            confirmPassword: event.target.confirmPassword.value
-        };
-    
-        try {
-            const response = await fetch('/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            });
-    
-            const result = await response.json();
-            
-            // Display the message in the message box
-            const messageBox = document.getElementById('messageBox');
-            const messageText = document.getElementById('messageText');
-            
-            messageBox.style.display = 'block'; // Show the message box
-            messageText.innerText = result.message; // Set the message text
-    
-            // Optionally, clear the form if sign-up is successful
-            if (result.success) {
-                event.target.reset(); // Reset the form
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            const messageBox = document.getElementById('messageBox');
-            const messageText = document.getElementById('messageText');
-            
-            messageBox.style.display = 'block'; // Show the message box
-            messageText.innerText = 'There was an error signing up. Please try again.'; // Set error message
-        }
-    });
-    
-}
+// Attach event listeners to forms when the document is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const signinForm = document.getElementById('signinForm');
+    const signupForm = document.getElementById('signupForm');
+    const passwordEntryForm = document.getElementById('passwordEntryForm');
+
+    if (signinForm) {
+        signinForm.addEventListener('submit', handleFormSubmission);
+    }
+
+    if (signupForm) {
+        signupForm.addEventListener('submit', handleFormSubmission);
+    }
+
+    if (passwordEntryForm) {
+        passwordEntryForm.addEventListener('submit', handleFormSubmission);
+    }
+});
