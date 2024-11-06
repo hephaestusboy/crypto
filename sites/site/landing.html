@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XIFRAR</title>
+    <link rel="stylesheet" href="./landing.css">
+</head>
+<body>
+    <section>
+        <div class="landing">
+            <div class="content">
+                <h1>Secure Vault</h1>
+                <p>Safeguard your passwords and access them easily with Secure Vault.</p>
+                <div class="password-list">
+                    <h2>Saved Passwords</h2>
+                    <ul id="passwordList">
+                        <!-- Passwords will be displayed here -->
+                    </ul>
+                    <a href="enter.html" class="add-btn">Add New Password</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script>
+        // Function to display saved passwords from localStorage
+        function displaySavedPasswords() {
+            const passwords = JSON.parse(localStorage.getItem('passwords')) || [];
+            const passwordList = document.getElementById('passwordList');
+
+            passwords.forEach(password => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <span>Website: ${password.title}</span>
+                    <span>Username: ${password.username}</span>
+                    <span>Password: ••••••••</span>
+                `;
+                
+                // Store the actual password as a data attribute
+                listItem.dataset.password = password.password;
+
+                // Add a click event listener to each list item
+                listItem.addEventListener('click', function() {
+                    alert(`Password: ${this.dataset.password}`);
+                });
+
+                passwordList.appendChild(listItem);
+            });
+        }
+
+        // Call the function to display passwords when the page loads
+        document.addEventListener('DOMContentLoaded', displaySavedPasswords);
+    </script>
+</body>
+</html>
