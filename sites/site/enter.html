@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XIFRAR</title>
+    <link rel="stylesheet" href="./enter.css">
+</head>
+<body>
+    <section>
+        <div class="password-entry">
+            <div class="content">
+                <h2>Add New Password</h2>
+                <form class="form" id="passwordEntryForm">
+                    <div class="inputBox">
+                        <input type="text" name="title" required>
+                        <label>Title (e.g., Website Name)</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" name="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Save Password">
+                    </div>
+                </form>
+                <div class="links">
+                    <a href="landing.html">Back to Passwords</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('passwordEntryForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const title = this.title.value;
+            const username = this.username.value;
+            const password = this.password.value;
+
+            // Create a password object
+            const newPassword = {
+                title: title,
+                username: username,
+                password: password
+            };
+
+            // Retrieve existing passwords from localStorage
+            const passwords = JSON.parse(localStorage.getItem('passwords')) || [];
+
+            // Add the new password to the array
+            passwords.push(newPassword);
+
+            // Save the updated passwords array back to localStorage
+            localStorage.setItem('passwords', JSON.stringify(passwords));
+
+            // Redirect to landing page
+            window.location.href = 'landing.html';
+        });
+    </script>
+</body>
+</html>
