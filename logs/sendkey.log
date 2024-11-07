@@ -124,3 +124,51 @@ Nov 06, 2024 1:26:48 AM javacode.Key getUserKey
 INFO: Enter the User Passphrase (A line):
 Nov 06, 2024 1:26:51 AM javacode.Key getUserKey
 INFO: User entered passphrase: huihiub
+Nov 06, 2024 9:44:07 AM javacode.Key generateRandomKey
+INFO: Generated random key: 9872311601692848611751186608819247064882961122220352058733539145750278664196879976828325828671392024289440552615
+Nov 06, 2024 9:44:07 AM javacode.Key getUserKey
+INFO: Enter the User Passphrase (A line):
+Nov 06, 2024 9:44:16 AM javacode.Key getUserKey
+INFO: User entered passphrase: hey this is a passohrase
+Nov 06, 2024 3:58:06 PM javacode.Key generateRandomKey
+INFO: Generated random key: 512156430955768569356440721399882276229210387372138470086540817125522053885032949657886838237902844565873259421377
+Nov 06, 2024 3:58:06 PM javacode.Key getUserKey
+INFO: Enter the User Passphrase (A line):
+Nov 06, 2024 3:58:19 PM javacode.Key getUserKey
+INFO: User entered passphrase: This is a passphrase
+Nov 06, 2024 4:00:36 PM javacode.Key generateRandomKey
+INFO: Generated random key: 34087476054082440752846875416531099866495497339943725653103836898521677999862606050240962338815631642663546769666
+Nov 06, 2024 4:00:36 PM javacode.Key getUserKey
+INFO: Enter the User Passphrase (A line):
+Nov 06, 2024 4:00:40 PM javacode.Key getUserKey
+INFO: User entered passphrase: this is a passphrase
+Nov 06, 2024 4:01:16 PM javacode.Key generateRandomKey
+INFO: Generated random key: 1106980465139655892500788301995030510058679983578022855496612260832881172255574409575694654174371022908712349106
+Nov 06, 2024 4:01:16 PM javacode.Key getUserKey
+INFO: Enter the User Passphrase (A line):
+Nov 06, 2024 4:01:22 PM javacode.Key getUserKey
+INFO: User entered passphrase: thise se pass phrase
+Nov 06, 2024 4:01:36 PM javacode.Key generateRandomKey
+INFO: Generated random key: 53295640896351142029161548256819927180242114951013742564430290338111631287812922986427136065322775935427404559796
+Nov 06, 2024 4:01:36 PM javacode.Key getUserKey
+INFO: Enter the User Passphrase (A line):
+Nov 06, 2024 4:01:48 PM javacode.Key getUserKey
+INFO: User entered passphrase: this is a passphrase
+Nov 06, 2024 4:08:03 PM javacode.Key generateRandomKey
+INFO: Generated random key: 53744469104393941283466531916663862166704310746003063166930535655384571404967457980756952039533163292949474280545
+Nov 06, 2024 4:08:03 PM javacode.Key getUserKey
+INFO: Enter the User Passphrase (A line):
+Nov 06, 2024 4:08:32 PM javacode.Key getUserKey
+INFO: User entered passphrase: this is a passphrase
+Nov 06, 2024 4:14:14 PM javacode.Key generateRandomKey
+INFO: Generated random key: 641894957963761922518885008391077995578312631490965792305445769932742894320010712324283483769795722488703722755657
+Nov 06, 2024 4:14:14 PM javacode.Key getUserKey
+INFO: Enter the User Passphrase (A line):
+Nov 06, 2024 4:14:19 PM javacode.Key getUserKey
+INFO: User entered passphrase: this is a passphrase
+Nov 06, 2024 4:30:32 PM javacode.Key generateRandomKey
+INFO: Generated random key: 1244428611195460985206598448831276696431749823191428564707225697589603345785396392851120324403591350786788201723
+Nov 06, 2024 4:30:32 PM javacode.Key getUserKey
+INFO: Enter the User Passphrase (A line):
+Nov 06, 2024 4:30:42 PM javacode.Key getUserKey
+INFO: User entered passphrase: this is a passphrase
